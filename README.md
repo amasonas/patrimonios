@@ -14,7 +14,7 @@ Para facilitar a utilização do mesmo, defini algumas variáveis do projeto, pa
 
 
 
-![image-20200412165757599](/home/junior/Documentos/navita/exam/media/image-20200412165757599.png)
+![image-20200412165757599](home/junior/Documentos/navita/exam/media/image-20200412165757599.png)
 
 
 
