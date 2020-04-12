@@ -43,10 +43,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "from usuario usr " +
                         "where usr.email = ? and " +
                         "usr.ativo = 1")
-                .authoritiesByUsernameQuery(" select usr.email, usr.senha, usr.ativo " +
-                        "from usuario usr " +
-                        "where usr.email = ? and " +
-                        "usr.ativo = 1")
+                .authoritiesByUsernameQuery(" select usr.email, rl.descricao from usuario usr " +
+                        " inner join role_usuario usrr on (usr.id = usrr.usuario_id) " +
+                        " inner join role rl on (usrr.role_id = rl.id)" +
+                        " where usr.email = ? " +
+                        " and   usr.ativo = 1")
                 .dataSource(dataSource)
                 .passwordEncoder(bCryptPasswordEncoderService.get());
 
