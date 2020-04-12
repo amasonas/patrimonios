@@ -1,5 +1,6 @@
 package com.navita.exam.usuario;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.navita.exam.role.Role;
 import lombok.Getter;
 import lombok.Setter;
@@ -36,5 +37,6 @@ public class Usuario {
             name = "role_usuario",
             joinColumns = @JoinColumn(name = "usuario_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @JsonIgnore
     private List<Role> roles;
 }

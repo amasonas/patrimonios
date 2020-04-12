@@ -10,6 +10,8 @@ postman.json
 
 
 
+
+
 Para facilitar a utilização do mesmo, defini algumas variáveis do projeto, para altera-las, basta editar a pasta e alterar as variáveis.
 
 

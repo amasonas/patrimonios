@@ -14,13 +14,14 @@ import java.util.List;
 @Entity
 @Table
 public class Marca {
-
     @JsonIgnore
     @OneToMany(mappedBy = "marca")
     List<Patrimonio> patrimonios;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @NotNull
     @Column(unique = true)
     private String nome;
