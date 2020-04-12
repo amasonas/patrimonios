@@ -14,7 +14,7 @@ Para facilitar a utilização do mesmo, defini algumas variáveis do projeto, pa
 
 
 
-![image-20200412165757599](home/junior/Documentos/navita/exam/media/image-20200412165757599.png)
+![image-20200412165757599](media/image-20200412165757599.png)
 
 
 
@@ -66,11 +66,11 @@ Para efetuar login na aplicação, deve enviar uma requisição conforme o exemp
 
 O token estará no cabeçalho de retorno da solicitação no atributo "Autorization"
 
-![image-20200412171254362](/home/junior/Documentos/navita/exam/media/image-20200412171254362.png)
+![image-20200412171254362](media/image-20200412171254362.png)
 
 Uma vez com o token de autorização for obtido, o mesmo deverá ser enviado em todas as requisições que serão apresentadas a seguir, conforme a imagem abaixo:
 
-![image-20200412171655894](/home/junior/Documentos/navita/exam/media/image-20200412171655894.png)
+![image-20200412171655894](media/image-20200412171655894.png)
 
 ### Marcas
 
