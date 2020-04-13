@@ -25,8 +25,6 @@ Manual de integração da Api de cadastro de patrimonios
         * [Busca de patrimônios por marca](#busca-de-patrim-nios-por-marca)
     + [Números irmãos](#n-meros-irm-os)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ### Instalação
 
