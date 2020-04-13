@@ -61,7 +61,7 @@ spring.datasource.username=postgres
 spring.datasource.password=pg123
 ```
 
-Caso queira utilizar uma instância do PostgreSQL, basta alterar as credênciais do segundo bloco para o contexto do seu ambiente
+Caso queira utilizar uma instância do PostgreSQL, basta alterar as credênciais do segundo bloco para o contexto do seu ambiente.
 
 ##### Executar a aplicação
 
