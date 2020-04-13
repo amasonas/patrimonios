@@ -4,10 +4,28 @@
 
 Manual de integração da Api de cadastro de patrimonios
 
+- [Cadastro de patrimonios](#cadastro-de-patrimonios)
+    + [Instalação](#instala--o)
+        * [Banco de dados](#banco-de-dados)
+        * [Executar a aplicação](#executar-a-aplica--o)
+    + [Postman](#postman)
+    + [Autenticação](#autentica--o)
+        * [Cadastro de novo usuário](#cadastro-de-novo-usu-rio)
+        * [Login](#login)
+    + [Marcas](#marcas)
+        * [Criar](#criar)
+        * [Editar](#editar)
+        * [Excluir](#excluir)
+        * [Listar todas as Marcas](#listar-todas-as-marcas)
+    + [Patrimônios](#patrim-nios)
+        * [Criar](#criar-1)
+        * [Editar](#editar-1)
+        * [Excluir](#excluir-1)
+        * [Listar todos os patrimonios](#listar-todos-os-patrimonios)
+        * [Busca de patrimônios por marca](#busca-de-patrim-nios-por-marca)
+    + [Números irmãos](#n-meros-irm-os)
 
-
-[TOC]
-
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 ### Instalação
