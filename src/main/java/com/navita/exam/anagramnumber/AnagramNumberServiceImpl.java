@@ -20,9 +20,7 @@ public class AnagramNumberServiceImpl implements AnagramNumberService {
 
             Collections.sort(digits, Collections.reverseOrder());
 
-            digits.forEach(digit -> {
-                result.append(digit);
-            });
+            digits.forEach(digit -> result.append(digit));
 
             return Integer.parseInt(result.toString());
         } else {

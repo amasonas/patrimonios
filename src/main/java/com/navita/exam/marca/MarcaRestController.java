@@ -13,22 +13,22 @@ public class MarcaRestController {
     private MarcaService marcaService;
 
     @GetMapping
-    private List<Marca> findAll() {
+    public List<Marca> findAll() {
         return marcaService.findAll();
     }
 
     @PostMapping
-    private Marca create(@RequestBody Marca marca) {
+    public Marca create(@RequestBody Marca marca) {
         return marcaService.save(marca);
     }
 
     @PutMapping("{marca}")
-    private Marca update(@PathVariable Marca marca, @RequestBody Marca marcaAtualizada) {
+    public Marca update(@PathVariable Marca marca, @RequestBody Marca marcaAtualizada) {
         return marcaService.update(marca, marcaAtualizada);
     }
 
     @DeleteMapping("{marca}")
-    private void delete(@PathVariable Marca marca) {
+    public void delete(@PathVariable Marca marca) {
         marcaService.delete(marca);
     }
 }

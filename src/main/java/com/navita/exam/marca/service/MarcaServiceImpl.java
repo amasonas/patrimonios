@@ -27,7 +27,6 @@ public class MarcaServiceImpl implements MarcaService {
 
     @Override
     public Marca update(Marca marca, Marca marcaAtualizada) {
-
         marca.setNome(marcaAtualizada.getNome());
 
         return marcaRepository.save(marca);

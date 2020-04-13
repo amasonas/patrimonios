@@ -26,6 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable().authorizeRequests()
+                .antMatchers("/anagram_number/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/usuario").permitAll()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .anyRequest().authenticated()
@@ -41,13 +42,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()
                 .usersByUsernameQuery(" select usr.email, usr.senha, usr.ativo " +
                         "from usuario usr " +
-                        "where usr.email = ? and " +
-                        "usr.ativo = 1")
+                        "where usr.email = ?")
                 .authoritiesByUsernameQuery(" select usr.email, rl.descricao from usuario usr " +
                         " inner join role_usuario usrr on (usr.id = usrr.usuario_id) " +
                         " inner join role rl on (usrr.role_id = rl.id)" +
-                        " where usr.email = ? " +
-                        " and   usr.ativo = 1")
+                        " where usr.email = ? ")
                 .dataSource(dataSource)
                 .passwordEncoder(bCryptPasswordEncoderService.get());
 

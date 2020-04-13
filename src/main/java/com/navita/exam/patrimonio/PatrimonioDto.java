@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class PatrimonioDto {
     private long id;
+
     private long marca;
 
     private String descricao;

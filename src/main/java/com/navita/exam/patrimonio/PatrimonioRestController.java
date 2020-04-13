@@ -35,7 +35,8 @@ public class PatrimonioRestController {
     }
 
     @PutMapping("{patrimonio}")
-    public Patrimonio Update(@PathVariable Patrimonio patrimonio, @RequestBody PatrimonioDto patrimonioDto) throws Exception {
+    public Patrimonio update(@PathVariable Patrimonio patrimonio,
+                             @RequestBody PatrimonioDto patrimonioDto) throws Exception {
 
         return patrimonioService.update(patrimonio, patrimonioDto);
     }

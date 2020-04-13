@@ -1,0 +1,308 @@
+{
+  "info": {
+    "_postman_id": "b4549f54-9c0e-4540-96e3-167c15cfa141",
+    "name": "Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Marca",
+      "item": [
+        {
+          "name": "Criar Marca",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nome\":\"Dell\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{url}}/marca"
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Marcas",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/marca",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "marca"
+              ],
+              "query": [
+                {
+                  "key": "Authorization",
+                  "value": "{{token}}",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Marca",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{url}}/marca/3"
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar marca",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nome\": \"Chamex - update\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{url}}/marca/1"
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Patrimonio",
+      "item": [
+        {
+          "name": "LIstar",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{url}}/patrimonio"
+          },
+          "response": []
+        },
+        {
+          "name": "Listar por marca",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{url}}/patrimonio/2"
+          },
+          "response": []
+        },
+        {
+          "name": "Criar novo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"marca\": 2,\n\t\"nome\":\"Caneta\",\n\t\"descricao\":\"Caneta Azul\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{url}}/patrimonio"
+          },
+          "response": []
+        },
+        {
+          "name": "Editar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 1,\n    \"descricao\": \"Super Caneta\",\n    \"nome\": \"Caneta Azul\",\n    \"marca\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{url}}/patrimonio/1"
+          },
+          "response": []
+        },
+        {
+          "name": "Apagar",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": "{{url}}/patrimonio/1"
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Autenticação",
+      "item": [
+        {
+          "name": "Criar usuário",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nome\":\"Amasonas\",\n\t\"email\":\"teste@gmail.com\",\n\t\"ativo\": true,\n\t\"senha\":\"12345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{url}}/usuario"
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nome\":\"amasonas.vieira@gmail.com\",\n\t\"senha\":\"12345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{url}}/login"
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "6f5439db-45eb-44ab-86c5-ec69104b1621",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "21817ad3-0a5a-4281-b9dd-7a8eb0098f54",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "2fc7ef28-048c-45ba-8e31-902369e69315",
+      "key": "url",
+      "value": "http://127.0.0.1:8082",
+      "type": "string"
+    },
+    {
+      "id": "4b2a150f-4cae-4580-a5e3-f7daed80c993",
+      "key": "token",
+      "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbWFzb25hcy52aWVpcmFAZ21haWwuY29tIiwiZXhwIjoxNTg3NjAzOTM4fQ.mp0-EioF2UZK9EK9SI5KvQnqSOhKF2uHR9a9BuGOqgi8JqMEOeNa1nVFd_Nn9Ca6-B3xvzuKC9GNzJaRmoNLZA",
+      "type": "string"
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
